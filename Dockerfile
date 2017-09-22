@@ -1,10 +1,10 @@
 FROM mongo:latest
 
-ENV MONGODB_DATABASE hygieia
+ENV MONGODB_DATABASE dashboard
 
-ENV MONGODB_USERNAME admin
+ENV MONGODB_USERNAME db
 
-ENV MONGODB_PASSWORD zaq12wsx
+ENV MONGODB_PASSWORD dashboard
 
 ADD db-setup.sh /tmp/db-setup.sh
 ADD db-setup.js /tmp/db-setup.js
