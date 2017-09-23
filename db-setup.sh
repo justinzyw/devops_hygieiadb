@@ -4,6 +4,7 @@
 # docker-compose uses depends_on, but while building the following will fail since it
 # assumes a hard-dependency on 'mongodb'
 if [ "$MONGO_STARTED" != "" ]; then
+  mongod --fork --logpath /var/log/mongod.log
   # Sample: MONGO_PORT=tcp://172.17.0.20:27017
-  mongo mongodb/admin < /tmp/db-setup.js
+  mongo < /tmp/db-setup.js
 fi
