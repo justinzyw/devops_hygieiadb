@@ -3,6 +3,8 @@
 
 mongod --fork --logpath=/var/log/mongodb.log
 
-if [ "$MONGO_STARTED" != "" ]; then
-  mongo < /tmp/db-setup.js
-fi
+mongo < /tmp/db-setup.js
+
+mongod --shutdown
+
+mongod
