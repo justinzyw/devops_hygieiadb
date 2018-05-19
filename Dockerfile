@@ -1,4 +1,4 @@
-FROM mongo:latest
+FROM mongo:3.6.4
 
 ENV MONGODB_DATABASE hygieia
 
